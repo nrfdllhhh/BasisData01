@@ -1,0 +1,92 @@
+Setting environment for using XAMPP for Windows.
+A DELL@DESKTOP-URIA4A0 c:\xampp
+# mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 8
+Server version: 10.4.32-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> SHOW DATABASES;
++---------------------+
+| Database            |
++---------------------+
+| bangbootss          |
+| dbkuliah_nurfadilah |
+| dbkuliahnurfadilah  |
+| dbnurfadilahkuliah  |
+| dbti02              |
+| dbtoko              |
+| information_schema  |
+| mysql               |
+| performance_schema  |
+| phpmyadmin          |
+| test                |
++---------------------+
+11 rows in set (0.070 sec)
+
+MariaDB [(none)]> USE dbkuliah_nurfadilah;
+Database changed
+MariaDB [dbkuliah_nurfadilah]> SHOW TABLES;
++-------------------------------+
+| Tables_in_dbkuliah_nurfadilah |
++-------------------------------+
+| jurusan                       |
+| mahasiswa                     |
++-------------------------------+
+2 rows in set (0.001 sec)
+
+MariaDB [dbkuliah_nurfadilah]> SELECT * FROM jurusan;
++----+--------------------+
+| id | nama               |
++----+--------------------+
+|  3 | Bisnis Digital     |
+|  4 | Sarjana Hukum      |
+|  5 | Sastra Bahasa      |
+|  2 | SisteM Informasi   |
+|  1 | teknik Informatika |
++----+--------------------+
+5 rows in set (0.090 sec)
+
+MariaDB [dbkuliah_nurfadilah]> SELECT * FROM mahsiswa;
+ERROR 1146 (42S02): Table 'dbkuliah_nurfadilah.mahsiswa' doesn't exist
+MariaDB [dbkuliah_nurfadilah]> SELECT * FROM mahasiswa;
++----+-----------+----------------+------------------+-----------+-------------+
+| id | nim       | nama           | alamat           | idjurusan | foto        |
++----+-----------+----------------+------------------+-----------+-------------+
+|  1 | 110223075 | Nur Fadilah    | Parung Bogor     |         1 | Fadilah.JPG |
+|  2 | 110223165 | Vincen Siregar | Kota Medan       |         4 | Siregar.JPG |
+|  3 | 110221013 | Samsul Blues   | Yogyakarta       |         2 | Samsul.JPG  |
+|  4 | 110221112 | Sky Shane      | Pontianak        |         3 | Shane.JPG   |
+|  5 | 110223378 | Junez Albert   | Kalimantan Barat |         5 | Junez.JPG   |
++----+-----------+----------------+------------------+-----------+-------------+
+5 rows in set (0.022 sec)
+
+MariaDB [dbkuliah_nurfadilah]> SHOW DATABASES;
++---------------------+
+| Database            |
++---------------------+
+| bangbootss          |
+| dbkuliah_nurfadilah |
+| dbkuliahnurfadilah  |
+| dbnurfadilahkuliah  |
+| dbti02              |
+| dbtoko              |
+| information_schema  |
+| mysql               |
+| performance_schema  |
+| phpmyadmin          |
+| test                |
++---------------------+
+11 rows in set (0.001 sec)
+
+MariaDB [dbkuliah_nurfadilah]> /q
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '/q' at line 1
+MariaDB [dbkuliah_nurfadilah]> \q;
+Bye
+
+A DELL@DESKTOP-URIA4A0 c:\xampp
